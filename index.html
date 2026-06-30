@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Saaiya</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #1a1d24;
+    --card-hover: #232730;
+    --text: #e7e9ee;
+    --muted: #9aa1ad;
+    --accent: #14b8a6;
+    --border: rgba(255, 255, 255, 0.07);
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f5f6f8;
+      --card: #ffffff;
+      --card-hover: #f0f1f4;
+      --text: #1a1d24;
+      --muted: #6b7280;
+      --accent: #0d9488;
+      --border: rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
+      "Noto Sans JP", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    margin: 0 auto 18px;
+    background: linear-gradient(135deg, var(--accent), #6366f1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .bio {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+
+  .link:hover {
+    background: var(--card-hover);
+    transform: translateY(-2px);
+  }
+
+  .link .icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  .link .label { flex: 1; text-align: left; }
+
+  .link .chev {
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  footer {
+    margin-top: 36px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="avatar">S</div>
+    <h1>Saaiya</h1>
+    <p class="bio">個人開発でご当地情報交換アプリ「motto」を作っています。</p>
+
+    <nav class="links">
+      <a class="link" href="https://motto.yasashii-sek.ai" target="_blank" rel="noopener noreferrer">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        <span class="label">motto <span style="color:var(--muted);font-weight:400;font-size:13px;">ご当地情報交換アプリ</span></span>
+        <span class="chev">↗</span>
+      </a>
+
+      <a class="link" href="https://note.com/saaiya" target="_blank" rel="noopener noreferrer">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm3 5v8h2.2v-4.6L12.8 16H15V8h-2.2v4.6L9.2 8z"/></svg>
+        <span class="label">note <span style="color:var(--muted);font-weight:400;font-size:13px;">ミッションを綴る</span></span>
+        <span class="chev">↗</span>
+      </a>
+
+      <a class="link" href="https://x.com/motto_jp" target="_blank" rel="noopener noreferrer">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7 8 8.2 12h-6.4l-5-7.3L9 22H6l7.5-8.6L5.5 2H12l4.5 6.6zm-1.1 18h1.7L8.3 3.8H6.5z"/></svg>
+        <span class="label">X <span style="color:var(--muted);font-weight:400;font-size:13px;">motto 広報</span></span>
+        <span class="chev">↗</span>
+      </a>
+
+      <a class="link" href="https://www.youtube.com/channel/UCUYUVN5zZRku8NX5pQ5CFKw/" target="_blank" rel="noopener noreferrer">
+        <svg class="icon" viewBox="0 0 24 24" fill="#ff0000" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg>
+        <span class="label">YouTube</span>
+        <span class="chev">↗</span>
+      </a>
+
+      <a class="link" href="https://saaiya-chan.github.io/Meguri/" target="_blank" rel="noopener noreferrer">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <span class="label">Meguri</span>
+        <span class="chev">↗</span>
+      </a>
+    </nav>
+
+    <footer>© 2026 Saaiya</footer>
+  </main>
+</body>
+</html>
